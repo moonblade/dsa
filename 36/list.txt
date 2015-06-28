@@ -1,0 +1,38 @@
+1. Stack using array			stack.c		11/12/14	S	M
+2. Variable sized two stacks		multi_stack.c	29/12/14	S	M
+3. Multiple stacks of fixed size	n_stack.c	11/12/14	S	M
+4. Stack LINKD List	 		stack_ll.c	11/12/14	S	M
+5. Queue using array 			queue.c		29/12/14	S	M
+6. Circular Queue			cqueue.c	02/02/15	S	M
+7. Double ended queue			deque.c		02/03/15	S	M
+8. Token processing at bank		bank.c		03/02/15	S	M
+9. Queue using linked list		queue_ll.c	23/02/15	S	M
+10. Implement priority Queue		pqueue.c	09/02/15	S	M
+11 Addition of Sparse matrix		sparse_add.c	09/02/15	S	M
+12. Transpose of a sparse Matrix	sparse_trans.c	23/02/15	S	M
+13. Addition of sparse matrix using LL	sparse_ll.c	24/02/15	S	M
+14. Infix to postfix and evaluate it	 postfix.c	09/03/15	S	M
+16. Implementation Of C LL		clinkedlist.c	30/3/15		S	M
+18. Addition of two polynomials using linked list	poly_add.c	06/04/15	S M
+19. Multiplication of two polynomials using array	poly_multi_arr.c 07/04/15	S M
+20. Multiplication of two polynomials using LL		poly_multi_ll.c	07/04/15	S M
+24. Quicksort				quicksort.c	31/3/15		S
+
+----------------------------------------------------------------------------------
+
+
+
+
+
+---------------------------------------
+To Complete
+15. (check)Implementaion of ll
+
+25. Mergesort 				MergeSort.c
+---------------------------------------
+Questions:
+17. Doubly LL
+21. BT
+22. BST 
+23. BST certain function
+26. Heap Sort

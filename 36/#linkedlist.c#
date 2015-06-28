@@ -1,0 +1,208 @@
+/*
+  Ex No. 15 
+  Implementation of Linked List
+  S4R 036 Mohamed Insaf K
+  23-03-2015
+*/
+
+#include <stdlib.h>
+#include <stdio.h>
+
+struct node{
+  int data;
+  struct node *next;
+}*h=NULL;
+
+void insert(int data, int choice, int pos)
+{
+  /*
+    int p;
+    struct node *temp, *t;
+    t = h;
+    temp = (struct node *)malloc(sizeof(struct node));
+    temp->data = data;
+    if(h == NULL)
+    {
+    h = temp;
+    temp->next = NULL;
+    }*/
+  struct node *n, *t;
+  int p1;
+  n = (struct node *)malloc(sizeof(struct node));
+  n->data = data;
+  if( h==NULL )
+    {
+      h = n;
+      h->next = NULL;
+        }
+  switch(choice)
+    {
+    case 1:
+      t = h;
+      while( t->next != h )   t = t->next;
+      t->next = n;
+      n->next = h;
+      break;
+    case 2:
+      if(pos <= 1)
+	{
+	  t = h;
+	  while( t->next != h )   t = t->next;
+	  t->next = n;
+	  n->next = h;
+	  h = n;
+	}
+      else
+	{
+	  t = h;
+	  for( p1=2; p1 < pos && t->next != h; t = t->next, p1++);
+                                n->next = t->next;
+                                t->next = n;
+	}
+      break;
+    }
+  /*
+    
+    
+    
+    
+    
+    else
+    {
+    switch(choice)
+    {
+    case 1: //Insert at end
+    while(t->next!=NULL)
+    t=t->next;
+    t->next = temp;
+    temp->next = NULL;
+    break;
+    case 2://given position
+    if(pos<=1)
+    {
+    temp->next = t;
+    h = temp;
+    }
+    else
+    {
+    for(p=2; (p<pos) && t->next!=NULL; (t=t->next), p++);
+    temp->next = t->next;
+    t->next = temp;
+    }
+    break;
+    case 3://After given key
+    //Here pos is taken as key
+    while( t->next!=NULL && t->data != pos );
+    if( t==NULL )
+    {
+    printf("Could't find the given key, so inserting at the end");
+    }
+    temp->next = t->next;
+    t->next = temp;
+    break;
+    
+    case 4://before given key
+    //				while( t!=NULL && t->data != pos );
+    while( t->next != NULL && (t->next)->data != pos);
+    if( t==NULL )
+    {
+    printf("Could't find the given key, so inserting at the end");
+    }
+    temp->next = t->next;
+    t->next = temp;
+    break;
+    default:break;
+    }
+    }
+  */
+}
+
+void submenu(int c)
+{
+  printf("\t1. at end\n"
+	 "\t2. at given position\n"
+	 "\t3. after given key\n"
+	 "\t4. before given key\n"
+	 );
+  if(c==1)
+    printf("\t5. Delete key\n");
+}
+
+void display()
+{
+  for(; h != NULL; h=h->next)
+    printf("%d  ->", h->data);
+}
+int main(void)
+{
+  int choice, inner, position, data;
+  while(1)
+    {
+      printf("\n1. Insert\n"
+	     "2. Delete\n"
+	     "3. Display\n"
+	     "4. Exit\n"
+	     "Please Choose: "
+	     );
+      scanf("%d", &choice);
+      switch(choice)
+	{
+	case 1:
+	  printf("Insert..\n");
+	  submenu(0);
+	  scanf("%d", &inner);
+	  printf("Enter data to be inserted: ");
+	  scanf("%d", &data);
+	  switch(inner)
+	    {
+	    case 1:
+	      insert(data, inner, -1);
+	      break;
+	    case 2:
+	      printf("Enter position: ");
+	      scanf("%d", &position);
+	      insert(data, inner, position);
+	      break;
+	    case 3:
+	      break;
+	    case 4:
+	      break;
+	    default:
+	      printf("Wrong option\n");
+	    }
+	  break;
+	case 2:
+	  printf("Delete..\n");
+	  submenu(1);
+	  scanf("%d", &inner);
+	  printf("Enter data to be inserted: ");
+	  scanf("%d", &data);
+	  switch(inner)
+	    {
+	    case 1:
+	      break;
+	    case 2:
+	      break;
+	    case 3:
+	      break;
+	    case 4:
+	      break;
+	    case 5:
+	      break;
+	    default:
+	      printf("Wrong option\n");
+	    }
+	  break;
+	case 3:
+	  display();
+	  break;
+	case 4:
+	  return 0;
+	  break;
+	default:
+	  printf("Wrong option\n");
+	}
+    }
+  return 0;
+}
+

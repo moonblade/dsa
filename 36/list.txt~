@@ -1,0 +1,18 @@
+1. Stack using array			stack.c		11/12/14	S	TM
+2. Variable sized two stacks		multi_stack.c	29/12/14	S	TM
+3. Multiple stacks of fixed size	n_stack.c	11/12/14	S	TM
+4. Stack LINKD List	 		stack_ll.c	11/12/14	S	TM
+5. Queue using array 			queue.c		29/12/14	S	TM
+6. Circular Queue			cqueue.c	02/02/15	S
+7. Double ended queue			deque.c		02/03/15	S
+8. Token processing at bank		bank.c		03/02/15	S
+9. Queue using linked list		queue_ll.c	23/02/15	S
+10. Implement priority Queue		pqueue.c	09/02/15	S
+11 Addition of Sparse matrix		sparse_add.c	09/02/15	S	TM
+12.
+13. Addition of sparse matrix using LL	sparse_ll.c	24/02/15
+
+----------------------------------------------------------------------------------
+
+12. Transpose of a sparse matrix
+

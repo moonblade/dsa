@@ -1,0 +1,21 @@
+/*
+	Ex No. 18
+	Addition of two polynomials using linked list
+	S4R 036 Mohamed Insaf
+	06/04/2015
+*/
+
+struct node
+{
+	int coeff;
+	int exp;
+	struct node *next;
+};
+
+void insert(int coeff, int exp, struct node** start)
+{
+	struct node *n, *temp;
+	n = (struct node *)malloc(sizeof(struct node));
+	n->coeff = coeff;
+	
+}
